@@ -4,10 +4,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        idx = 0
+        idx = 1
         size = len(nums)
         while idx < size:
-            if ((idx != 0) and (nums[idx - 1] == nums[idx])):
+            if (nums[idx - 1] == nums[idx]):
                 nums.pop(idx)
                 size -= 1
             else:
