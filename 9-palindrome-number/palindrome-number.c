@@ -1,16 +1,16 @@
 bool isPalindrome(int x) {
     if (x < 0) return false;
 
-    char numStr[12];
-    sprintf(numStr, "%d", x);
+    int original = x;
+    int reversed = 0;
 
-    int len = strlen(numStr);
-    
-    for (int i = 0; i < len / 2; i++) {
-        if (numStr[i] != numStr[len - i - 1]) {
+    while (x != 0) {
+        int digit = x % 10;
+        if (reversed > (INT_MAX - digit) / 10) {
             return false;
         }
+        reversed = reversed * 10 + digit;
+        x /= 10;
     }
-
-    return true;
+    return original == reversed;
 }
