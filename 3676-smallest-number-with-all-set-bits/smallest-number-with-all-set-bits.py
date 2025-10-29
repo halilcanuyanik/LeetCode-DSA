@@ -4,7 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        e_str = ""
         ans = 0
         idx = 0
         while n != 0:
