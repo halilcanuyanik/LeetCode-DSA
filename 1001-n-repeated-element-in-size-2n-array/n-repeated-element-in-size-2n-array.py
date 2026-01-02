@@ -4,8 +4,6 @@ class Solution:
         n = len(nums) / 2
         for i in nums:
             if i in numberDic:
-                if numberDic[i] == n - 1:
-                    return i
                 numberDic[i] += 1
             else:
                 numberDic[i] = 1
