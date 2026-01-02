@@ -18,4 +18,9 @@ class Solution(object):
                 else :
                     stack.pop()
 
-        return len(stack) == 0
+        if (len(stack) != 0):
+            return False
+        
+        return True
+        
+        return True
