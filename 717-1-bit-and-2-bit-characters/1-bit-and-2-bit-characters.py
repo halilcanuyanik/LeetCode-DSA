@@ -4,18 +4,12 @@ class Solution:
             return False
 
         i = 0
+        n = len(bits)
 
-        while (i < ((len(bits) - 2))):
-            if bits[i] == 0:
-                i += 1
-            else:
+        while i < n - 1:
+            if bits[i] == 1:
                 i += 2
-        
-        if i == len(bits) - 1:
-            return True
-        else:
-            if bits[i] == 0:
-                return True
             else:
-                return False
-        
+                i += 1
+
+        return i == n - 1
